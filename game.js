@@ -29,7 +29,7 @@ const gameOfLife = {
   },
 
   forEachCell: function (iteratorFunc) {
-    var self = this;
+    let self = this;
     Array.from(document.getElementsByTagName('td')).forEach(function(cell){
       var coords = self.getCoordsOfCell(cell);
       iteratorFunc(cell, coords[0], coords[1]);
@@ -38,8 +38,8 @@ const gameOfLife = {
 
   // Utility functions
   getCoordsOfCell: function(cell){
-    var cellId = cell.id;  // '0-0'
-    var idSplit = cellId.split('-'); // ['0', '0']
+    let cellId = cell.id;  // '0-0'
+    let idSplit = cellId.split('-'); // ['0', '0']
 
     return idSplit.map(function(str){
       return parseInt(str,10);
