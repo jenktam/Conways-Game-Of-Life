@@ -103,12 +103,12 @@ const gameOfLife = {
       alert("test play")
     })
 
-    document.getElementById('reset_btn').addEventListener("click", function() {
-      alert("test random")
+    document.getElementById('reset_btn').addEventListener("click", function(e) {
+      gameOfLifeObj.resetRandom();
     })
 
     document.getElementById('clear_btn').addEventListener("click", function(e) {
-      gameOfLife.clearBoard();
+      gameOfLifeObj.clearBoard();
     })
   },
 
@@ -123,17 +123,26 @@ const gameOfLife = {
     // 2. Set the next state of all cells based on their alive neighbors
   },
 
+  clearBoard: function() {
+    this.forEachCell(function(cell) {
+      this.setCellStatus(cell, 'dead');
+    }.bind(this));
+  },
+
+  resetRandom: function() {
+    //randomly reset alive and dead cells
+    this.forEachCell(function(cell) {
+      Math.random() > .5 ?
+        this.setCellStatus(cell, 'alive')
+      :
+        this.setCellStatus(cell, 'dead')
+    }.bind(this))
+  },
+
   enableAutoPlay: function () {
     // Start Auto-Play by running the 'step' function
     // automatically repeatedly every fixed time interval
-  },
-
-  clearBoard: function() {
-    this.forEachCell(function(cell) {
-      this.setCellStatus(cell, "dead");
-    }.bind(this));
   }
-
 
 };
 
