@@ -7,6 +7,6 @@ td {
   border: 1px solid black
 }
 
-td:hover {
-  background-color: pink;
+td.alive {
+  background-color: rgb(57, 177, 139);
 }
