@@ -4,14 +4,23 @@ const getLivingNeighbors = (xCoord, yCoord, grid = []) => {
   const height = grid.length;
   const width = grid[0].length;
 
-  // If a cell is at the edge of the grid, the cell on the opposite edge will be its neighbor
+  // Capture corners. If a cell is at the edge of the grid, the cell on the opposite edge will be its neighbor
   const left = xCoord - 1 < 0 ? (width - 1) : (xCoord - 1);
   const right = xCoord + 1 === width ? 0 : (xCoord + 1);
   const up = yCoord - 1 < 0 ? (height - 1) : (yCoord - 1);
   const down = yCoord + 1 === height ? 0 : (yCoord + 1);
+  console.log("xCoord", xCoord)
+  console.log("yCoord", yCoord)
+  console.log("width", width)
+  console.log("height", height)
+  console.log("left", left)
+  console.log("right", right)
+  console.log("up", up)
+  console.log("down", down)
 
   let count = 0;
 
+  //once received indexes of neighbors, count number of living neighbors and return total
   count += grid[up][left].status;
   count += grid[up][xCoord].status;
   count += grid[up][right].status;
@@ -27,7 +36,7 @@ const getLivingNeighbors = (xCoord, yCoord, grid = []) => {
 // Determines the next state of a cell based on the number of living neighbors
 const determineNextState = (grid = [], xCoord, yCoord) => {
   let status;
-  let currStatus = grid[yCoord][xCoord].status;
+  let currStatus = grid[yCoord][xCoord].status; //0 or 1
   let count = getLivingNeighbors(xCoord, yCoord, grid);
   if (currStatus && (count === 2 || count === 3)) {
     status = 1;
@@ -45,7 +54,7 @@ const makeGrid = (condition, height, width, grid = []) => {
   for (let yCoord = 0; yCoord < height; yCoord++) { //rows
     const row = [];
     for (let xCoord = 0; xCoord < width; xCoord++) { //columns
-      let status;
+      let status; //0 = dead, 1 = living
       if (condition === 'clear') {
         status = 0;
       }
