@@ -1,2 +1,2 @@
-table{height:600px;width:600px}td{border:1px solid #000}td.alive{background-color:#39b18b}.main{margin:0 25%}
+body{margin:auto}table{height:600px;width:600px;margin:0 auto}td{border:1px solid #000}td.alive{background-color:#39b18b}.main{margin:0 25%}.btn-default{color:#333;background-color:#fff;border-color:#ccc;margin:5px 10px}#app,footer{text-align:center}footer{position:absolute;right:0;bottom:0;left:0;padding:1rem;background-color:#efefef}
 /*# sourceMappingURL=style.css.map*/
