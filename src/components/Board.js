@@ -3,8 +3,9 @@ import React from 'react';
 import Cell from './Cell';
 
 const Board = props => {
+  console.log("props.board.grid", props.board.grid)
   return (
-    <div>
+    <div className="board">
       <table>
         <tbody>
           {props.board.grid.map((row, yCoord) => (

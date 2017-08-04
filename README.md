@@ -33,4 +33,4 @@ The discrete moment at which all the births and deaths actually occur is often c
 - [ ] Add generation counter container and component to capture number of new generations
 
 ### Bonus Features
-- [ ] Add styles to make visualizations more appealing.
+- [x] Add styles to make visualizations more appealing.

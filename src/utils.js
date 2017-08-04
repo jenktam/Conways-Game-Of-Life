@@ -9,14 +9,6 @@ const getLivingNeighbors = (xCoord, yCoord, grid = []) => {
   const right = xCoord + 1 === width ? 0 : (xCoord + 1);
   const up = yCoord - 1 < 0 ? (height - 1) : (yCoord - 1);
   const down = yCoord + 1 === height ? 0 : (yCoord + 1);
-  console.log("xCoord", xCoord)
-  console.log("yCoord", yCoord)
-  console.log("width", width)
-  console.log("height", height)
-  console.log("left", left)
-  console.log("right", right)
-  console.log("up", up)
-  console.log("down", down)
 
   let count = 0;
 

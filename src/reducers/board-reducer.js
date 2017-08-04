@@ -9,8 +9,8 @@ import {
 
 import makeGrid from '../utils';
 
-const gridHeight = 30
-const gridWidth = 45
+const gridHeight = 45
+const gridWidth = 60
 
 //INITIAL BOARD STATE
 const initialState = {
