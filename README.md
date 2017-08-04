@@ -22,10 +22,11 @@ The discrete moment at which all the births and deaths actually occur is often c
 - [x] Write cell class, which will change cell to alive or dead based on the rules
 
 ### Phase 2: Buttons
-- [ ] Add clear button
-- [ ] Add randomize button
-- [ ] Add play/pause button
-- [ ] Add step button
+- [x] Add clear button
+- [x] Add randomize button
+- [x] Add play button
+- [x] Add pause button
+- [x] Add step button
 
 ### Phase 3: Generation Counter
 

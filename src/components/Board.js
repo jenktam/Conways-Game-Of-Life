@@ -3,7 +3,6 @@ import React from 'react';
 import Cell from './Cell';
 
 const Board = props => {
-  console.log("props", props)
   return (
     <div>
       <table>
@@ -24,15 +23,3 @@ const Board = props => {
 };
 
 export default Board;
-
-/*
- {props.board.grid.map((row, yCoord) => (
-            <tr key={yCoord}>
-              {row.map((cell, xCoord) => (
-                <Cell key={xCoord}
-                  status={props.board.grid[yCoord][xCoord].status}
-                  handleClick={() => props.toggleCell(xCoord, yCoord)} />
-              ))}
-            </tr>
-          ))}
-           */

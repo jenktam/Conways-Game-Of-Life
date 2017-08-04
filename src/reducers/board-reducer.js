@@ -1,5 +1,10 @@
 import {
-  TOGGLE_CELL
+  TOGGLE_CELL,
+  CLEAR,
+  RANDOMIZE,
+  PLAY,
+  PAUSE,
+  STEP_FORWARD
 } from '../constants'
 
 import makeGrid from '../utils';
@@ -25,6 +30,28 @@ export default (state = initialState, action) => {
 
       if(cell.status) cell.status = 0;
       else if(!cell.status) cell.status = 1;
+      break;
+
+    case CLEAR:
+      newState.grid = makeGrid('clear', gridHeight, gridWidth)
+      break;
+
+    case RANDOMIZE:
+      newState.grid = makeGrid('random', gridHeight, gridWidth)
+      break;
+
+    case PLAY:
+      newState.isPlaying = true;
+      newState.requestID = action.requestID;
+      break;
+
+    case PAUSE:
+      newState.isPlaying = false;
+      newState.requestID = null;
+      break;
+
+    case STEP_FORWARD:
+      newState.grid = makeGrid('next', gridHeight, gridWidth, state.grid)
       break;
 
     default:
