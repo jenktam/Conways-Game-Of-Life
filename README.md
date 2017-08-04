@@ -1,7 +1,7 @@
 # Game of Life in JS
 John Horton Conway's game of life is pseudo-simulation of life. This simple system produces complex behaviour, determining cells as alive or dead.
 
-![](http://gph.is/2u9nrel)
+<img src="public/images/Game-of-Life.gif" width="600px" />
 
 ## Cell Regeneration Rules
 * Any live cell with two or three live neighbors lives on to the next generation.
