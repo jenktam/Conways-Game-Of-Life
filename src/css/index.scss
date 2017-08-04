@@ -1,3 +1,12 @@
-body {
-  background-color: pink
+table {
+  height: 600px;
+  width: 600px;
+}
+
+td {
+  border: 1px solid black
+}
+
+td:hover {
+  background-color: pink;
 }
