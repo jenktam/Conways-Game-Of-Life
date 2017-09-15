@@ -34,3 +34,6 @@ The discrete moment at which all the births and deaths actually occur is often c
 
 ### Bonus Features
 - [x] Add styles to make visualizations more appealing.
+
+### View it yourself
+Have fun with my version of the game of life! You can play around with it (here)[].
